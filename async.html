@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYNC</title>
+</head>
+
+<body>
+    <script>
+
+        // JAVASCRIPT AS a Single Threaded Synchronous language
+
+        // Single Threaded-- > One BLOCK of Code at a time
+
+        // synchronous - the code gets executed line by line, from top to bottom
+
+        //  SETTIMEOUT , CALLBACK FUNCTIONS
+        console.log('Voy primero')
+        setTimeout(() => console.log('SOY CLEAN CODE'), 3000)
+        console.log('BRAGUETAZO LIMPIO')
+
+        // QUÉ ESTÁ OCURRIENDO AQUÍ????
+
+        // function sayHi() {
+        //     console.log('Buenos días hermosuras')
+        // }
+
+        // setTimeout(sayHi(), 3000) // EJEMPLO FALLIDO DE INVOCACIÓN --> PÁSALE LA FUNCIÓN CHIQUI
+
+        // const timeIsUp = true
+
+        // setTimeout(() => {
+        //     console.log('FUNSIONA, NO???')
+        // }, 2000);
+
+        // const timeoutId = setTimeout(() => {
+        //     console.log('Lmaaaaooo')
+        // }, 2000);
+
+        // const _timeoutId = setTimeout(() => {
+        //     console.log('Lmaaaaooo')
+        // }, 2000);
+
+        // console.log(timeoutId) // 1
+        // console.log(_timeoutId) // 2
+
+        // if (timeIsUp) clearTimeout(timeoutId)
+
+        // SET INTERVAL
+
+        // setInterval(() => {
+        //     console.log('Buenos días, hermosos')
+        // }, 1000);
+
+        let timer = 11
+
+        const intervalId = setInterval(() => {
+            timer--
+            console.log(`Te quedan ${timer} segundos!!!`)
+            if (!timer) {
+                alert('LA PALMASTE, TÍO!')
+                clearInterval(intervalId)
+            }
+        }, 1000)
+
+    </script>
+</body>
+
+</html>

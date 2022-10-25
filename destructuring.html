@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+
+<body>
+    <script>
+        // DESTRUCTURING
+
+        // let person = {
+        //     name: 'Ironhacker',
+        //     age: 25,
+        //     favoriteMusic: 'Metal',
+        // }
+
+        // const { name, age, favoriteMusic: genre } = person
+
+        // console.log(genre)
+
+
+        // NESTED DESTRUCTURING
+
+        const person = {
+            name: 'Ironhacker',
+            age: 25,
+            favoriteMusic: 'Metal',
+            address: {
+                street: 'Super Cool St',
+                number: 123,
+                city: 'Miami',
+            },
+        }
+
+        // const { name, age, favoriteMusic, address: { street, number, city } } = person
+        // const { name, age, favoriteMusic, address } = person
+        // const { street, number, city } = address
+
+        // console.log(street, number, city)
+
+        // console.log(person)
+
+        // const data = {
+        //     name: {
+        //         firstName:
+        //         {
+        //             realName: 'ana',
+        //             nickName: 'anita(❁´◡`❁)'
+        //         },
+        //         lastName: 'marino',
+        //     },
+        //     isStudent: true,
+        //     favoriteFootballTeam: 'fc barcelona',
+        //     hometown: {
+        //         city: 'buenos aires',
+        //         country: 'argentina',
+        //     },
+        // }
+
+        // const { name: { firstName: { nickName } } } = data
+        // const { nickName } = data.name.firstName
+
+        // console.log(nickName)
+
+        // const { name: { firstName, lastName }, favoriteFootballTeam, hometown: { city, country } } = data
+
+        // DEEP NESTED DESTRUCTURING EXAMPLE -----
+
+
+        // ARRAY DESTRUCTURING
+
+        const campuses = ['madrid', 'barcelona', 'miami']
+        // const [popino, b, c] = campuses
+
+        // ARRAY DESTRUCTURING DEFAULT VALUES
+
+        // const [campus1, campus2, campus3, noesloquepiensas = 'SIESLOQUEPIENSASMIKE'] = campuses
+        // console.log(noesloquepiensas) //
+        // console.log(campuses)
+
+        // SPREAD OPERATOR AND REST PARAMETER (...)
+        // DEFAULT PARAMETER VALUES
+
+        // function add(a, b, c, d = 1) {
+        //     console.log(d)
+        //     let sum = a + b + c + d
+        //     return sum
+        // }
+
+        // console.log(add(10, 2, 5, 8))
+
+        // function add(...numbers) {
+        //     console.log(numbers)
+        //     // QUIÉN ERES TÚ???
+        // }
+
+        // add(1, 2, 3)
+        // add(1, 2)
+
+        // MIXED DESTRUCTURING (●'◡'●) ---> firstName, lastName, age, tech, books
+
+        const customer = {
+            name: {
+                firstName: 'ivan',
+                lastName: 'zoro',
+            },
+            age: 32,
+            preferences: [
+                {
+                    id: ['cameras', 'smartwatches'],
+                    books: ['science fiction', 'coding'],
+                },
+            ],
+        }
+
+        // const { name: { firstName, lastName }, age, preferences: [{ tech, books }] } = customer
+        // console.log(tech, books)
+        // const [ifwefiwenfe] = tech
+        // console.log(ifwefiwenfe)
+
+        // const {
+        //     name: { firstName, lastName },
+        //     age,
+        //     preferences: [{ tech, books }],
+        // } = customer
+
+        // const { tech, books } = customer.preferences[0]
+        // console.log(tech, books)
+    </script>
+</body>
+
+</html>

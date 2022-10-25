@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope and Hosting</title>
+</head>
+
+<body>
+    <script>
+        // SCOPE  
+
+        // function sayHi() {
+        //     const username = 'DESDE EL BLOQUE ANIDADO'
+        //     if (true) {
+        //         const favoriteWord = "ORNITORRINCO"
+        //         console.log(username) // SÍ TENGO ACCESO A USERNAME
+        //         console.log(favoriteWord)
+        //     }
+        // }
+
+        // sayHi()
+
+        // console.log(username)
+
+        // var a = 'HOLA HERMOSOS'
+        // console.log(window) // ??? GLOBAL OBJECT POLLUTION
+
+        // var name = 'Ironhacker';
+
+        // if (true) {
+        //     var name = 'Ted'; // SHADOWING
+        //     console.log(`Name inside if statement: ${name}`);
+        // }
+
+        // console.log(`Name outside if statement: ${name}`);
+
+        // const name = 'Ironhacker'
+
+        // if (true) {
+        //     const name = 'Ted'
+        //     console.log(`Name inside if statement: ${name}`)
+        // }
+
+        // console.log(`Name outside if statement: ${name}`)
+
+        // HOISTING variables and function declarations are moved
+        // to the top of their scope before code execution.
+        // console.log(message) //
+        // var message = 'Hello from the global scope!'
+        // const message = 'Hello from the global scope!'
+        // let message = 'Hello from the global scope!'
+
+        // const number = 5 // SHADOWING
+
+        // {
+        //     // const number
+        //     console.log(number)
+        //     const number = 6
+        // }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Value vs Reference</title>
+</head>
+
+<body>
+    <script>
+
+        let price1 = 20.99
+        let price2 = price1
+        // console.log(price1 === price2) // 
+
+        let name1 = 'Ana'
+        let name2 = 'Ana'
+        // console.log(name1 === name2) // 
+
+
+
+        // const book1 = {
+        //     author: 'T. S. Eliot',
+        //     title: 'The Waste Land',
+        // }
+
+        // const book1Copy = { ...book1 }
+
+        // console.log(book1Copy)
+
+        // console.log(book1 === book1Copy)
+
+        // const books = ['The Catcher in the Rye', 'The Outsider', 'The Picture of Dorian Gray']
+        // const _books = [...books] // 
+        // console.log(books === _books) //  
+
+        // const _newBooks = ['Fifty Shades of Grey', 'The Alchemist', 'Harry Potter']
+        // console.log(newBooks === _newBooks) // 
+
+        // ARRAY EXTRA IN-SITU METHODS
+
+        // push, pop, unshift, shift, splice
+        const newBooks = ['Fifty Shades of Grey', 'The Alchemist', 'Harry Potter']
+
+        newBooks.push('El símbolo perdido', 'El Chisme')
+
+        newBooks.pop()
+
+        newBooks.unshift('La Celestina')
+
+        newBooks.shift()  // ELIMINA EL PRIMER ELEMENTO DE UN ARRAY
+
+        // newBooks.splice(0, 4, 'Frankenstein', 'The Picture of Dorian Gray', 'Lord of the flies', 'El Banquete')
+        // newBooks.splice(0)
+
+        // console.log(newBooks)
+
+        // ... LOS TRES PUNTITOS
+
+        const students = ['Ana', 'John', 'Fabio']
+        const ironhackers = ['Ariel', ...students]
+
+        // console.log(students) // 
+        // console.log(ironhackers) // 
+
+        const book = {
+            author: 'Wittgenstein',
+            field: 'Philosophy/Logic',
+            book: 'Philosophical Investigations',
+            pages: 450
+        }
+
+        const theSameBook = { ...book, pages: 400 }
+
+        console.log(theSameBook)
+
+    </script>
+</body>
+
+</html>
